@@ -6,15 +6,27 @@ $headerSize: 80px;
 
 body, html {
     background-color: $color_bg;
-    color: $color_primary_light;
+    color: $color_font;
     font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', sans-serif;
 
     h1, h2, h3, h4, h5, h6 {
         color: $white;
     }
 
-    p, span, ul, li {
-        color: $color_primary_light;
+    p, span {
+        color: $color_font;
+    }
+
+    ul {
+        li {
+            color: #212121;
+        }
+
+        &.final-winner {
+            li {
+                color: $green;
+            }
+        }
     }
 
     a {
@@ -24,6 +36,10 @@ body, html {
             color: $color_secondary;
         }
     }
+}
+
+.container {
+    padding: 20px 15px;
 }
 
 .main-container {
@@ -57,6 +73,26 @@ body, html {
 
         > div > div {
             height: 100% !important;
+        }
+    }
+
+    // Override Bootstrap 4
+    $color_border: #374058;
+
+    .jumbotron {
+        background-color: #373a41;
+    }
+
+    .card, .list-group-item {
+        background-color: #303645;
+        border: 1px solid $color_border;
+    }
+
+    .breadcrumb {
+        background-color: #373a41;
+
+        > .active {
+            color: $color_font;
         }
     }
 }
@@ -129,6 +165,10 @@ header {
             background-color: $color_primary;
         }
     }
+}
+
+.final-winner {
+    color: $green;
 }
 
 // Slides and sliders

@@ -18,13 +18,32 @@ var Menu = React.createClass({
     render: function () {
         return (
             <header className={this.props.orientation}>
+
                 <div className={"flex-container " + this.props.orientation}>
-                    <h1 className="logo">Slidr</h1>
-                    <div data-route="/" data-index="0" onClick={this.handleClick} className={"btn " + (this.props.route == '/' && this.props.slide == 0?'active':'')}>Home</div>
-                    <div data-route="/" data-index="1" onClick={this.handleClick} className={"btn " + (this.props.route == '/' && this.props.slide == 1?'active':'')}>Safety</div>
-                    <div data-route="/" data-index="2" onClick={this.handleClick} className={"btn " + (this.props.route == '/' && this.props.slide == 2?'active':'')}>Contact</div>
-                    <div data-route="/user" data-index="0" onClick={this.handleClick} className={"btn " + (this.props.route == '/user'?'active':'')}>Users</div>
+                    <nav className={"navbar navbar-dark bg-faded"}>
+                        <a className="navbar-brand" href="#">Navbar</a>
+                        <ul className="nav navbar-nav">
+                            <li className="nav-item active">
+                                <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Features</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Pricing</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">About</a>
+                            </li>
+                        </ul>
+                        <form className="form-inline pull-xs-right">
+                            <input className="form-control" type="text" placeholder="Search" />
+                            <button className="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </nav>
                 </div>
+
+
             </header>
         )
     }

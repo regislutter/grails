@@ -6,9 +6,22 @@
 - Run the command `npm run start`
 - Visit `http://localhost:8080`
 
-## Bootstrap 4 (alpha)
+## Libraries
 
-This project use Bootstrap 4 (alpha) : [http://v4-alpha.getbootstrap.com/layout/overview/]
+This project use some libraries to enhanced his features and design:
+
+### React
+
+- React Swipeable Views: [https://github.com/oliviertassinari/react-swipeable-views]
+- React Sidebar: [https://github.com/balloob/react-sidebar]
+
+### JavaScript
+
+- SweetAlert2: [https://limonte.github.io/sweetalert2/]
+
+### HTML/CSS
+
+- Bootstrap 4 (alpha): [http://v4-alpha.getbootstrap.com/layout/overview/]
 
 ## What are flows and slides ?
 

@@ -12,9 +12,5 @@ styleLoaders:
   - sass?sourceMap
 
 styles: true
-#  normalize: true
-#  print: true
 
 scripts: true
-#  alert: true
-#  button: true
