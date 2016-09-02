@@ -6,6 +6,9 @@ var React = require('react');
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 require("../assets/sass/styles.scss");
 
+var Translate   = require('react-translate-component');
+var LocaleSwitcher = require('./LocaleSwitcher');
+
 var Main = React.createClass({
     contextTypes: {
         router: React.PropTypes.object.isRequired
@@ -149,27 +152,28 @@ var Main = React.createClass({
 
         return (
             <div className="container">
-                <h1>Grail Winner Picker</h1>
-                <p>by <a href="http://boxandpop.com" target="_blank">BoxAndPop.com</a></p>
+                <LocaleSwitcher />
+                <h1><Translate content="home.title" /></h1>
+                <p><Translate content="home.by" /> <a href="http://boxandpop.com" target="_blank">BoxAndPop.com</a></p>
                 <form>
                     <div className="form-group">
-                        <label for="gamblers">Gamblers list</label>
+                        <label for="gamblers"><Translate content="home.gamblers" /></label>
                         <textarea id="gamblers" className="form-control" rows="5" value={this.state.textGamblers} onChange={this.handleTextChange}></textarea>
                     </div>
                     <fieldset className="form-group">
-                        <legend>Type of raffle</legend>
+                        <legend><Translate content="home.typeraffle" /></legend>
                         <div className="radio">
                             <label>
                                 <input type="radio" name="raffleType" id="raffle" value="raffle" checked={this.state.selectedRaffle === 'raffle'} onChange={this.handleRaffleChange} />
-                                    Raffle
+                                <Translate content="home.raffle" />
                             </label>
                         </div>
                         <div className="radio">
                             <label>
                                 <input type="radio" name="raffleType" id="miniraffle" value="miniraffle" checked={this.state.selectedRaffle === 'miniraffle'} onChange={this.handleRaffleChange} />
-                                    Mini-raffle
+                                <Translate content="home.miniraffle" />
                                     <div className="form-group">
-                                        <label for="nbWinners">Number of winners</label>
+                                        <label for="nbWinners"><Translate content="home.nbwinners" /></label>
                                         <select className="form-control" id="nbWinners" onChange={this.handleNbWinners}>
                                             <option>1</option>
                                             <option>2</option>
@@ -184,10 +188,10 @@ var Main = React.createClass({
                             </label>
                         </div>
                     </fieldset>
-                    <button onClick={this.handleChooseWinners} type="button" className="btn btn-primary">Pick {(this.state.selectedRaffle == 'miniraffle'?'winners':'a winner')}!</button>
+                    <button onClick={this.handleChooseWinners} type="button" className="btn btn-primary"><Translate content="home.pick" />!</button>
                 </form>
                 <br/>
-                <h3>Winner{(this.state.selectedRaffle == 'miniraffle'?'s':'')}</h3>
+                <h3><Translate content="home.winner" />{(this.state.selectedRaffle == 'miniraffle'?'s':'')}</h3>
                 { listWinners }
             </div>
         )

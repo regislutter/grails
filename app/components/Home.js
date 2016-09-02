@@ -37,7 +37,10 @@ var Home = React.createClass({
 
         return (
             <div className="slide">
-                <h1>Grail Winner Picker</h1>
+                <h1>
+                    <span data-lang="en">Grail Winner Picker</span>
+                    <span data-lang="fr"></span>
+                </h1>
 
                 <h3>Gamblers list</h3>
                 <textarea></textarea>
