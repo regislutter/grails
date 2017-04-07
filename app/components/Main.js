@@ -38,9 +38,7 @@ var Main = React.createClass({
                 confirmButtonText: 'Yep!'
             }).then(function() {
                 this.drawWinners();
-            }.bind(this)).catch((ui) => {
-                // console.log('cancel');
-            });
+            }.bind(this));
         } else {
             this.drawWinners();
         }
