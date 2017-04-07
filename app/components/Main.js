@@ -110,13 +110,13 @@ var Main = React.createClass({
         var listGamblers = [];
         for (var i = 0; i < textLines.length; i++) {
             var tmpText = textLines[i];
-            if(parseInt(tmpText.charAt(0)) != 'NaN'){
-                if(tmpText.indexOf('.') >= 0){
-                    tmpText = tmpText.substr(tmpText.indexOf('.')+1);
-                } else if (tmpText.indexOf(' ') > 0) {
-                    tmpText = tmpText.substr(tmpText.indexOf(' ')+1);
-                }
-            }
+            //if(parseInt(tmpText.charAt(0)) != 'NaN'){
+            //    if(tmpText.indexOf('.') >= 0){
+            //        tmpText = tmpText.substr(tmpText.indexOf('.')+1);
+            //    } else if (tmpText.indexOf(' ') > 0) {
+            //        tmpText = tmpText.substr(tmpText.indexOf(' ')+1);
+            //    }
+            //}
             listGamblers.push(tmpText.trim());
         }
         this.setState({
